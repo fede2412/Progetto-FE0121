@@ -1,0 +1,98 @@
+<h2>Modifica il cliente</h2>
+<div class="container-fluid mt-2 mx-3">
+  <div class="row">
+    <div class="col-md-10">
+      <form>
+        <div class="input-group mb-3">
+          <span class="input-group-text">ID</span>
+          <input type="number" class="form-control" disabled name="id" [(ngModel)]="cliente.id" value="{{cliente.id}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Ragione Sociale</span>
+          <input type="text" class="form-control" name="data" [(ngModel)]="cliente.ragioneSociale"
+            value="{{cliente.ragioneSociale}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Email</span>
+          <input type="text" class="form-control" name="numero" [(ngModel)]="cliente.email" value="{{cliente.email}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Partita Iva</span>
+          <input type="text" class="form-control" name="anno" [(ngModel)]="cliente.partitaIva"
+            value="{{cliente.partitaIva}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Tipo Cliente</span>
+          <input type="text" class="form-control" name="tipo" [(ngModel)]="cliente.tipoCliente"
+            value="{{cliente.tipoCliente}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">PEC</span>
+          <input type="text" class="form-control" name="pec" [(ngModel)]="cliente.pec" value="{{cliente.pec}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Telefono</span>
+          <input type="text" class="form-control" name="telefono" [(ngModel)]="cliente.telefono"
+            value="{{cliente.telefono}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Nome Contatto</span>
+          <input type="text" class="form-control" name="nome_contatto" [(ngModel)]="cliente.nomeContatto"
+            value="{{cliente.nomeContatto}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Cognome Contatto</span>
+          <input type="text" class="form-control" name="cognome_contatto" [(ngModel)]="cliente.cognomeContatto"
+            value="{{cliente.cognomeContatto}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Telefono Contatto</span>
+          <input type="text" class="form-control" name="telefono_contatto" [(ngModel)]="cliente.telefonoContatto"
+            value="{{cliente.telefonoContatto}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Email Contatto</span>
+          <input type="text" class="form-control" name="email_contatto" [(ngModel)]="cliente.emailContatto"
+            value="{{cliente.emailContatto}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Via</span>
+          <input type="text" class="form-control" name="via" [(ngModel)]="cliente.indirizzoSedeOperativa.via"
+            value="{{cliente.indirizzoSedeOperativa.via}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Via</span>
+          <input type="text" class="form-control" name="via" [(ngModel)]="cliente.indirizzoSedeOperativa.via"
+            value="{{cliente.indirizzoSedeOperativa.via}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Civico</span>
+          <input type="text" class="form-control" name="civico" [(ngModel)]="cliente.indirizzoSedeOperativa.civico"
+            value="{{cliente.indirizzoSedeOperativa.civico}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">CAP</span>
+          <input type="text" class="form-control" name="cap" [(ngModel)]="cliente.indirizzoSedeOperativa.cap"
+            value="{{cliente.indirizzoSedeOperativa.cap}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Località</span>
+          <input type="text" class="form-control" name="localita" [(ngModel)]="cliente.indirizzoSedeOperativa.localita"
+            value="{{cliente.indirizzoSedeOperativa.localita}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Comune</span>
+          <input type="text" class="form-control" name="comune" [(ngModel)]="cliente.indirizzoSedeOperativa.comune.nome"
+            value="{{cliente.indirizzoSedeOperativa.comune.nome}}">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Provincia</span>
+          <input type="text" class="form-control" name="provincia"
+            [(ngModel)]="cliente.indirizzoSedeOperativa.comune.provincia.nome"
+            value="{{cliente.indirizzoSedeOperativa.comune.provincia.nome}}">
+        </div>
+        <button (click)="modifica()" type="submit" class="btn btn-warning" routerLink="">OK</button>
+      </form>
+    </div>
+  </div>
+</div>

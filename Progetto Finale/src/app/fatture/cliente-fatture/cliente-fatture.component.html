@@ -1,0 +1,31 @@
+<button class="btn btn-primary" routerLink="/aggiungi_fattura/{{myId}}">Aggiungi fattura</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Data</th>
+      <th scope="col">Numero</th>
+      <th scope="col">Anno</th>
+      <th scope="col">Importo</th>
+      <th scope="col">Stato</th>
+      <th scope="col">Cliente</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let f of contenuto">
+    <tr>
+      <td>{{f.id}}</td>
+      <td>{{f.data | date:'dd MM YYYY'}}</td>
+      <td>{{f.numero}}</td>
+      <td>{{f.anno}}</td>
+      <td>{{f.importo | currency:'EUR'}}</td>
+      <td>{{f.stato.nome}}</td>
+      <td>{{f.cliente.ragioneSociale}}</td>
+      <td><button class="btn btn-warning" routerLink="/fatture/{{f.id}}">Modifica</button></td>
+      <td><button class="btn btn-danger" routerLink="/elimina_fattura/{{f.id}}">Elimina</button></td>
+    </tr>
+  </tbody>
+  <ngb-pagination (pageChange)="getPageFromService($event)" [(page)]="pagina" [maxSize]="6"
+    [collectionSize]="totale_elementi"></ngb-pagination>
+</table>

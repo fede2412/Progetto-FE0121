@@ -1,0 +1,29 @@
+<button class="btn btn-success mx-2" routerLink="/aggiungi_cliente">Aggiungi Cliente</button>
+<button class="btn btn-primary" routerLink="/aggiungi_fattura">Aggiungi Fattura</button>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Rag.Sociale</th>
+      <th scope="col">Email</th>
+      <th scope="col">Partita IVA</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let c of contenuto ">
+    <tr>
+      <td>{{c.id}}</td>
+      <td>{{c.ragioneSociale}}</td>
+      <td>{{c.email}}</td>
+      <td>{{c.partitaIva}}</td>
+      <td><button class="btn btn-primary" routerLink="/fatture_cliente/{{c.id}}">Fatture</button></td>
+      <td><button class="btn btn-warning" routerLink="/clienti/{{c.id}}">Modifica</button></td>
+      <td><button class="btn btn-danger" routerLink="/elimina_cliente/{{c.id}}">Elimina</button></td>
+    </tr>
+  </tbody>
+  <ngb-pagination (pageChange)="getPageFromService($event)" [(page)]="pagina" [maxSize]="6"
+    [collectionSize]="totale_elementi"></ngb-pagination>
+</table>

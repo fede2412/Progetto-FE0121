@@ -1,0 +1,73 @@
+<h2>Modifica la fattura</h2>
+<!--<ng-container *ngFor="let f of lista_fatture">
+    <ng-container *ngIf="myId==f.id">-->
+        <ng-container *ngIf="fattura">
+          <div class="container-fluid mt-2 mx-3">
+              <div class="row">
+                  <div class="col-md-10">
+                      <form>
+                          <div class="input-group mb-3">
+                              <span class="input-group-text">ID</span>
+                              <input type="number" class="form-control" disabled name="id" [(ngModel)]="fattura.id" value="{{fattura.id}}">
+                            </div>
+                            <div class="input-group mb-3">
+                        <!-- | date:'YYYY/MM/dd'-->      <input class="form-control" placeholder="{{fattura.data}}"
+                                     name="dp" [(ngModel)]="fattura.data " ngbDatepicker #d="ngbDatepicker">
+                              <div class="input-group-append">
+                                <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+                                  <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+                                  <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg></button>
+                              </div>
+                            </div>
+                            <!--<div class="input-group mb-3">
+                              <span class="input-group-text">Data</span>
+                              <input type="text" class="form-control" name="data"  [(ngModel)]="f.data" value="{{f.data}} | date:'dd MM YYYY'">
+                            </div>-->
+                            <div class="input-group mb-3">
+                              <span class="input-group-text">Numero</span>
+                              <input type="text" class="form-control" name="numero" [(ngModel)]="fattura.numero" value="{{fattura.numero}}">
+                            </div>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text">Anno</span>
+                              <input type="text" class="form-control" name="anno" disabled>
+                            </div>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text">Importo</span>
+                              <input type="text" class="form-control" name="importo" [(ngModel)]="fattura.importo" value="{{fattura.importo}}">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                  <label class="input-group-text" for="inputGroupSelect01">Stato Fattura</label>
+                              </div>
+                              <select type="number" name="stato" [(ngModel)]="fattura.stato.id"
+                                  class="custom-select">
+                                  <option selected>Stato Fattura</option>
+                                  <ng-container *ngIf="listaStatiFatture">
+                                      <ng-container *ngFor="let l of listaStatiFatture.content">
+                                          <option value="{{l.id}}">{{l.nome}}</option>
+                                      </ng-container>
+                                  </ng-container>
+                              </select>
+                          </div>
+                            <!--<div class="input-group mb-3">
+                              <span class="input-group-text">Stato</span>
+                              <input type="text" class="form-control" name="stato" [(ngModel)]="fattura.stato.nome" value="{{fattura.stato.nome}}">
+                            </div>-->
+                            <div class="input-group mb-3">
+                              <span class="input-group-text">Ragione Sociale</span>
+                              <input type="text" class="form-control" name="ragioneSociale" [(ngModel)]="fattura.cliente.ragioneSociale" value="{{fattura.cliente.ragioneSociale}}">
+                            </div>
+                            <button (click)="modifica()" type="submit" class="btn btn-warning" routerLink="/fatture">OK</button>
+                            
+                          </form>
+                  </div>
+              </div>
+          </div>
+        </ng-container>
+        <div>{{data | json}}</div>
+          
+   <!--</ng-container>
+</ng-container>--> 
+
+

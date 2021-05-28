@@ -1,0 +1,27 @@
+<h2>Lista deli Utenti registrati</h2>
+<ng-container *ngIf="isLogged">
+  <ng-container *ngIf="lista_utenti">
+      <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Username</th>
+              <th scope="col">Email</th>
+              <th scope="col">Ruolo</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let l of lista_utenti.content">
+            <tr>
+                <td>{{l.id}}</td>
+                <td>{{l.username}}</td>
+                <td>{{l.email}}</td>
+                <td>{{l.roles[0].roleName}}</td>
+          </tr>
+          </tbody>
+          <!--<ngb-pagination (pageChange)="getPageFromService($event)" [(page)]="pagina" [maxSize]="6"
+    [collectionSize]="totale_elementi"></ngb-pagination>-->
+        </table>
+  </ng-container>
+</ng-container>
+
+

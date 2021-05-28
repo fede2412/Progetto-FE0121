@@ -1,0 +1,7 @@
+.col-md-6 {
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 2em;
+    margin-top: 2em;
+    background-color: rgb(139, 106, 13);
+}
